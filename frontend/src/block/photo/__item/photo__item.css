@@ -1,0 +1,9 @@
+.photo__item {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

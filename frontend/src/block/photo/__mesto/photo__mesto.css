@@ -1,0 +1,8 @@
+.photo__mesto {
+  object-fit: cover;
+  height: 282px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}

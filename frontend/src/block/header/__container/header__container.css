@@ -1,0 +1,10 @@
+.header__container {
+    display: flex;
+}
+
+@media screen  and (max-width: 585px) {
+    .header__container {
+        margin-right: 30px;
+    }
+
+}
