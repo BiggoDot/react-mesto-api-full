@@ -10,7 +10,7 @@ const { JWT_SECRET = 'dev-key' } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
-    .then((users) => res.send({ data: users }))
+    .then((users) => res.send(users))
     .catch((err) => next(err));
 };
 
@@ -20,7 +20,7 @@ module.exports.getUserById = (req, res, next) => {
       if (!users) {
         throw new NotFoundError('User is not found');
       }
-      res.send({ data: users });
+      res.send(users);
     })
     .catch((err) => {
       if (err.name === 'CastError') {
@@ -34,7 +34,7 @@ module.exports.getUserById = (req, res, next) => {
 module.exports.findUserMe = (req, res, next) => {
   User.findById(req.user._id)
     .then((users) => {
-      res.send({ data: users });
+      res.send(users);
     })
     .catch((err) => {
       next(err);
@@ -58,12 +58,10 @@ module.exports.createUsers = (req, res, next) => {
         password: hash,
       })
         .then(() => res.status(201).send({
-          data: {
-            name,
-            about,
-            avatar,
-            email,
-          },
+          name,
+          about,
+          avatar,
+          email,
         }))
         .catch((err) => {
           if (err.name === 'ValidationError') {
@@ -90,7 +88,7 @@ module.exports.updateUserInfo = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('User is not found');
       }
-      res.send({ data: user });
+      res.send(user);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -112,7 +110,7 @@ module.exports.updateUserAvatar = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('User is not found');
       }
-      res.send({ data: user });
+      res.send(user);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -131,7 +129,7 @@ module.exports.login = (req, res, next) => {
       res.cookie('jwt', token, {
         maxAge: 604800000,
         httpOnly: true,
-      }).send({ data: token });
+      }).send(token);
     })
     .catch((err) => {
       if (err.name === 'Error') {
