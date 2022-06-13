@@ -130,6 +130,7 @@ function App(props) {
             .then((res) => {
                 if (res) {
                     localStorage.setItem('jwt', res.token);
+                    console.log(res.token)
                     setLoggedIn(true);
                     navigate('/');
                 }
