@@ -1,0 +1,9 @@
+.popup__input_for_entrance{
+    background-color: transparent;
+    color: #CCCCCC;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+.popup__input_for_entrance:last-of-type {
+    margin-bottom: 214px;
+}

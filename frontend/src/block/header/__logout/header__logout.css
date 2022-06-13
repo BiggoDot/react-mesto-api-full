@@ -1,0 +1,21 @@
+.header__logout {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: #A9A9A9;
+    margin: 0;
+    margin-top: 6px;
+    text-decoration: none;
+}
+
+.header__logout:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 585px) {
+    .header__logout {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

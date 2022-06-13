@@ -1,0 +1,13 @@
+.header__logout_screen_small {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .header__logout_screen_small {
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+}

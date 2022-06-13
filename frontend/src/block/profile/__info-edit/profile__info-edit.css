@@ -1,0 +1,11 @@
+.profile__info-edit {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .profile__info-edit {
+    justify-content: center;
+    margin-top: 23px;
+    margin-bottom: 35px;
+  }
+}
