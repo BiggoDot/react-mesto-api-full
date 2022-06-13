@@ -1,11 +1,11 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const { errors, Joi, celebrate } = require('celebrate');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const cors = require('cors');
 const {
   createUsers,
   login,

@@ -130,7 +130,6 @@ function App(props) {
             .then((res) => {
                 if (res) {
                     localStorage.setItem('jwt', res.token);
-                    console.log(res.token)
                     setLoggedIn(true);
                     navigate('/');
                 }
@@ -147,7 +146,7 @@ function App(props) {
             checkToken(jwt)
                 .then((res) => {
                     if (res) {
-                        setUserInfo({email: res.data.email});
+                        setUserInfo({email: res.email});
                         setLoggedIn(true);
                     }
                 })
