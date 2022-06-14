@@ -1,7 +1,6 @@
 class Api {
     constructor({baseUrl}) {
         this._url = baseUrl;
-        // this._headers = headers;
     }
 
     get _headers() {
@@ -88,8 +87,4 @@ class Api {
 
 export const api = new Api({
     baseUrl: 'http://biggodot.nomoredomains.xyz',
-    // headers: {
-    //     authorization: `Bearer ${localStorage.getItem('jwt')}`,
-    //     'Content-Type': 'application/json'
-    // }
 }); 
