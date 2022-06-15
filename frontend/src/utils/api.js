@@ -86,5 +86,5 @@ class Api {
 }
 
 export const api = new Api({
-    baseUrl: 'http://api.biggodot.nomoredomains.xyz',
+    baseUrl: 'https://api.biggodot.nomoredomains.xyz',
 }); 
