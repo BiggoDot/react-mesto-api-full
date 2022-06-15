@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://biggodot.nomoredomains.xyz';
+export const BASE_URL = 'http://api.biggodot.nomoredomains.xyz';
 
 function checkResponse(res) {
     if (res.ok) {
