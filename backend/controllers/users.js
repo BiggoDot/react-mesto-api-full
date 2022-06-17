@@ -74,7 +74,8 @@ module.exports.createUsers = (req, res, next) => {
           }
           next(err);
         });
-    });
+    })
+    .catch(next);
 };
 
 module.exports.updateUserInfo = (req, res, next) => {
